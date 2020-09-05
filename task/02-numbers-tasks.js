@@ -22,7 +22,7 @@
  *   5, 5  => 25
  */
 function getRectangleArea(width, height) {
-    return width*height;
+    return width * height;
 }
 
 
@@ -38,7 +38,7 @@ function getRectangleArea(width, height) {
  *   0    => 0
  */
 function getCicleCircumference(radius) {
-    return radius*2*Math.PI;
+    return radius * 2 * Math.PI;
 }
 
 /**
@@ -111,8 +111,7 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (1,2)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-    let angle = Math.acos(x1 * x2 + y1 * y2 - (Math.sqrt(x1 * y1) + Math.sqrt(x2 *y2)));
-    return angle;
+    return Math.acos(x1 * x2 + y1 * y2 - (Math.sqrt(x1 * y1) + Math.sqrt(x2 *y2)));
 }
 
 /**
@@ -204,11 +203,10 @@ function roundToPowerOfTen(num, pow) {
  */
 function isPrime(n) {
     let i;
-    if (n > 1)
-        {
-            for (i = 2; i < n; i++)
-                if (n % i === 0) 
-                    return false;
+    if (n > 1){
+        for (i = 2; i < n; i++)
+            if (n % i === 0) 
+                return false;
             return true;
         }
 }

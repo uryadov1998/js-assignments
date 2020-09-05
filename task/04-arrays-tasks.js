@@ -114,10 +114,7 @@ function getArrayOfStrings(arr) {
  *    [ false, 0, NaN, '', undefined ]   => [ ]
  */
 function removeFalsyValues(arr) {
-   return arr.filter(elem => {
-      if (elem)
-          return elem;
-  });
+    return arr.filter(element => element);
 }
 
 /**
@@ -131,10 +128,7 @@ function removeFalsyValues(arr) {
  *    [ 'a', 'b', 'c', 'd', 'e', 'f', 'g' ]  => [ 'A', 'B', 'C', 'D', 'E', 'F', 'G' ]
  */
 function getUpperCaseStrings(arr) {
-   let array = arr.map(elem => {
-      return elem.toUpperCase();
-  });
-  return array;
+  return arr.map(elem => elem.toUpperCase());
 }
 
 
@@ -221,10 +215,7 @@ function getTail(arr, n) {
  *    +'30,31,32,33,34'
  */
 function toCsvText(arr) {
-   let array = arr.map(elem => {
-      return elem.join(',') + '\n';
-  }).join('');
-  return array.slice(0, array.length - 1);
+  return arr.join('\n');
 }
 
 /**
@@ -407,12 +398,7 @@ function getItemsSum(arr) {
  *  [ null, undefined, NaN, false, 0, '' ]  => 6
  */
 function getFalsyValuesCount(arr) {
-   let numberOfFalses = 0;
-    arr.filter(elem => {
-        if (!elem)
-            numberOfFalses++;
-    });
-    return numberOfFalses;
+    return arr.filter(elem => !elem).length;
 }
 
 /**
@@ -430,12 +416,7 @@ function getFalsyValuesCount(arr) {
  *    [ true, 0, 1, 'true' ], true => 1
  */
 function findAllOccurences(arr, item) {
-   let numberOfRepeatedChars = 0;
-    arr.filter(elem => {
-        if (elem === item)
-            numberOfRepeatedChars++;
-    });
-    return numberOfRepeatedChars;
+    return arr.filter(elem => elem === item).length;
 }
 
 /**
